@@ -7,6 +7,10 @@ app = Flask(__name__)
 def redirect_msg():
     return 'Send post req to /similarity'
 
+@app.route('/test', methods=['POST'])
+def test():
+    return jsonify({"similarity score": 0.5})
+
 @app.route('/similarity', methods=['POST'])
 def similarity_handler():
     data = request.get_json(force=True)
