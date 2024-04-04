@@ -14,6 +14,3 @@ def similarity_handler():
     text2 = data.get('text2')
     score = similarity(text1, text2);
     return jsonify({"similarity score": score})
-
-if __name__ == '__main__':
-    app.run(host='127.0.0.2', port=8080)
